@@ -62,6 +62,14 @@ end
 
 def checkout(cart, coupons)
   consolidatedcart = consolidate_cart(cart)
+  couponsapplied = apply_coupons(consolidatedcart)
+  clearanceapplied = apply_clearance(couponsapplied)
+  index = 0
+  total = 0
+  while index < clearanceapplied.length do
+    
+    index +=1
+  end
   
   
   # Consult README for inputs and outputs
