@@ -32,6 +32,7 @@ def apply_coupons(cart, coupons)
     currentcouponitem = coupons[index][:item]
     currentcouponamount = coupons[index][:num]
     discountedprice = coupons[index][:cost].fdiv(currentcouponamount)
+    clearanceornot = find_item_by_name_in_collection
     itemincart = find_item_by_name_in_collection(currentcouponitem, cart)
     if itemincart[:count] >= coupons[index][:num]
       itemincart[:count] -= coupons[index][:num]
