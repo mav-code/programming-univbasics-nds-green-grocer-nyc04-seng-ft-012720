@@ -35,9 +35,6 @@ def apply_coupons(cart, coupons)
     itemincart = find_item_by_name_in_collection(currentcouponitem, cart)
     if itemincart[:count] >= coupons[index][:num]
       itemincart[:count] -= coupons[index][:num]
-        if itemincart[:count] = 0
-          cart.delete(itemincart)
-        end
       cart << {:item => "#{currentcouponitem} W/COUPON", :price => discountedprice, :clearance => true, :count => currentcouponamount}
     end
     index += 1
