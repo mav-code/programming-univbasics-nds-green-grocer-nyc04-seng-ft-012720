@@ -67,9 +67,11 @@ def checkout(cart, coupons)
   index = 0
   total = 0
   while index < clearanceapplied.length do
-    
+    localtotal = clearanceapplied[index][:price] * clearanceapplied[index][:count]
+    total = total + localtotal
     index +=1
   end
+  return
   
   
   # Consult README for inputs and outputs
