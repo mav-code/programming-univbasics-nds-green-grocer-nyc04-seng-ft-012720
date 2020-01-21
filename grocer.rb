@@ -71,7 +71,7 @@ def checkout(cart, coupons)
     total = total + localtotal
     index +=1
   end
-  return
+  return total
   
   
   # Consult README for inputs and outputs
